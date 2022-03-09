@@ -1,0 +1,15 @@
+<h1>Welcome to dashboard</h1>
+
+
+<a id="button" href="/"><button>Logout</button></a>
+
+<table ng-controller="dashboard-controller">
+    <tr>
+        <td>ID</td>
+        <td>&nbsp;&nbsp;&nbsp;Name</td>
+    </tr>
+    <tr ng-repeat="x in names">
+        <td>{{ x.id }}</td>
+        <td>&nbsp;&nbsp;&nbsp;{{ x.name}}</td>
+      </tr>
+  </table>

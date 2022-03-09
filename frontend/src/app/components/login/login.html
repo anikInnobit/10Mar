@@ -1,0 +1,46 @@
+
+
+<div ng-app="root-app"  ng-controller="login-controller">
+
+  <h1>Login</h1>
+  
+
+
+<!-- Form -->
+    <form  name="myForm">
+        
+        
+    <!-- Username -->
+        <p>Username:<br>
+            <input type="text" name="user" ng-model="user" ng-required="true">
+            <span style="color:red" ng-show="myForm.user.$touched && myForm.user.$invalid"><br>
+                <span ng-show="myForm.user.$error.required">Username is required.</span>
+            </span>
+            </p>
+       
+    <!-- Password -->
+            <p>Password:<br>
+            <input type="text" name="password" ng-model="password" required>
+            <span style="color:red" ng-show="myForm.password.$touched && myForm.password.$invalid"><br>
+            <span ng-show="myForm.password.$error.required">password is required.</span>
+            </span>
+            </p>    
+
+            
+
+    <!-- Button -->
+        
+        <p>
+            <a href="dashboard">
+                <input type="submit"    ng-click="postdata(user, password)"
+                ng-disabled="myForm.user.$pristine && myForm.user.$invalid ||  
+                myForm.password.$pristine && myForm.password.$invalid">
+            </a>
+        </p>
+            
+    </form>
+
+</div>
+
+
+
